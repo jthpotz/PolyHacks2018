@@ -1,6 +1,7 @@
 // When the user scrolls the page, execute myFunction
 var navbar;
 var locationbar;
+var headerbar;
 var stickyNav;
 var stickyLoc;
 var location_pos = 0;
@@ -11,13 +12,17 @@ var category_names = ["Furniture", "Electronics", "Personal Items", "Office Supp
 var category_text;
 var room_box;
 var cat_box;
+var room;
+var category;
 var cur_choice = "Room";
+var choice_text;
 window.onscroll = function() {stick()};
 window.onload = function() {
     // Get the navbar
     navbar = document.getElementById("navbar");
     console.log(navbar);
     locationbar = document.getElementById("locationbar");
+    headerbar = document.getElementById("headerbar");
 
     // Get the offset position of the navbar
     stickyNav = navbar.offsetTop;
@@ -29,6 +34,7 @@ window.onload = function() {
     category_text = document.getElementById("category");
     room_box = document.getElementById("room_list");
     cat_box = document.getElementById("category_list");
+    choice_text = document.getElementById("choice");
 }
 
 
@@ -43,10 +49,16 @@ function stick() {
   
   if (window.pageYOffset >= stickyNav) {
     locationbar.classList.add("sticky_loc");
-    console.log(locationbar.style.top);
   } else {
     locationbar.classList.remove("sticky_loc");
   }
+  
+  if (window.pageYOffset >= stickyNav) {
+    headerbar.classList.add("sticky_head");
+  } else {
+    headerbar.classList.remove("sticky_head");
+  }
+  
 }
 
 function hide(id) {
@@ -124,11 +136,17 @@ function set_room(name){
     room_text.innerHTML = "Room: " + name;
     room_box.style.display = "none";
     cat_box.style.display = "flex";
+    room = name;
+    cur_choice = "Category";
+    update_section_text(cur_choice);
 }
 
-function set_category(category){
-    category_text.innerHTML = "Category: " + category;
+function set_category(name){
+    category_text.innerHTML = "Category: " + name;
     cat_box.style.display = "none";
+    category = name;
+    cur_choice = "Item";
+    update_section_text(cur_choice);
 }
 
 function reset(){
@@ -136,4 +154,20 @@ function reset(){
     category_text.innerHTML = "Category: None Selected";
     room_box.style.display = "flex";
     cat_box.style.display = "none";
+    cur_choice = "Room";
+    update_section_text(cur_choice);
+}
+
+function update_section_text(update){
+    choice_text.innerHTML = update;
+}
+
+function jump_cat(){
+    if(!(cur_choice == "Room")){
+        category_text.innerHTML = "Category: None Selected";
+        room_box.style.display = "none";
+        cat_box.style.display = "flex";
+        cur_choice = "Category";
+        update_section_text(cur_choice);
+    }
 }
