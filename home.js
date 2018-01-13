@@ -52,4 +52,4 @@ function show_flex(id) {
 function change_view(show_id, hide_id){
     hide(hide_id);
     show(show_id);
-} 
+}
