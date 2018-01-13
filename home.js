@@ -2,6 +2,7 @@
 var navbar;
 var locationbar;
 var stickyNav;
+var stickyLoc;
 window.onscroll = function() {stick()};
 window.onload = function() {
     // Get the navbar
@@ -11,21 +12,22 @@ window.onload = function() {
 
     // Get the offset position of the navbar
     stickyNav = navbar.offsetTop;
+    stickyLoc = locationbar.offsetTop;
 }
 
 // Add the sticky class to the navbar when you reach its scroll position. Remove "sticky" when you leave the scroll position
 function stick() {
   if (window.pageYOffset >= stickyNav) {
-    navbar.classList.add("sticky");
-    Console.log("func stuck");
+    navbar.classList.add("sticky_nav");
   } else {
-    navbar.classList.remove("sticky");
+    navbar.classList.remove("sticky_nav");
   }
+  
   if (window.pageYOffset >= stickyNav) {
-    navbar.classList.add("sticky");
-    Console.log("func stuck");
+    locationbar.classList.add("sticky_loc");
+    console.log(locationbar.style.top);
   } else {
-    navbar.classList.remove("sticky");
+    locationbar.classList.remove("sticky_loc");
   }
 }
 

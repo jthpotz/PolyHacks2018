@@ -23,9 +23,15 @@
 }
 
 /* The sticky class is added to the navbar with JS when it reaches its scroll position */
-.sticky {
+.sticky_nav {
     position: fixed;
     top: 0;
+    width: 100%
+}
+
+.sticky_loc {
+    position: fixed;
+    top: 70px;
     width: 100%
 }
 
@@ -51,7 +57,6 @@
     background-color: #333;
     display: flex;
     display-content: flex-start;
-    display: none;
 }
 
 /* Navbar links */
