@@ -77,14 +77,14 @@ function load_locations(){
     var top_row = true;
     
     
-    while(i < room_names.length && i < 8){
+    while(i < room_names.length && i < 6){
         var elem = document.createElement("img");
         console.log("icons/rooms/" + room_names[i] + ".png");
         elem.setAttribute("src", "icons/rooms/" + room_names[i] + ".jpg");
         elem.setAttribute("class", "location_icon");
         elem.setAttribute("onclick", "set_room(\"" + room_names[i] + "\")");
         var div;
-        if(i < 4){
+        if(i < 3){
             div = document.getElementById("top_loc");
         }
         else{

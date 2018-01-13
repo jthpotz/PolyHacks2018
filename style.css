@@ -103,6 +103,7 @@
 #item_description_box{
     display: flex;
     justify-content: space-between;
+    display: none;
 }
 
 .edit_button {
@@ -131,6 +132,7 @@
 #item_photo_box{
     display: flex;
     justify-content: flex-start;
+    display: none;
 }
 
 #item_photo{
@@ -143,6 +145,7 @@
 
 #item_rest_box{
     margin-left: 20px;
+    display: none;
 }
 
 #myImg {
@@ -234,19 +237,22 @@
 #room_list {
     display: flex;
     justify-content: flex-start;
+    height: 100vh;
 }
 
 #category_list {
     display: none;
-    justify-content: flex-start
+    justify-content: flex-start;
+    height: 100vh;
 }
 
 .location_icon, .left_arr_img, .right_arr_img {
     height: auto; 
     width: auto; 
-    max-width: 125px; 
-    max-height: 125px;
+    max-width: 175px; 
+    max-height: 175px;
     margin: auto;
+    border-radius: 5px;
 }
 
 #top_loc, #top_cat {
