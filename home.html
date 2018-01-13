@@ -79,5 +79,43 @@ Ut sollicitudin ligula id ante semper pharetra. Aenean elit justo, hendrerit id 
 
 Aliquam ullamcorper, nisi vel porta facilisis, purus urna faucibus risus, eget tristique quam lacus vitae metus. Curabitur tristique, lectus ac efficitur aliquet, justo est luctus risus, quis facilisis turpis enim ut risus. Nullam ut eros dolor. In enim purus, consequat vitae imperdiet vitae, lacinia id mi. Aliquam cursus porta libero, eu faucibus libero ultricies rutrum. Sed ut nisl tellus. Curabitur iaculis enim id ligula luctus blandit. Sed dictum tempor orci, sed tempus est porta non. Donec commodo nisi sed bibendum mattis. 
     </p>
+
+<body>
+    <div id = "img_photo">
+        <img id="myImg" src="blue_square.png" alt="blue square!!!" width="200" height="200">
+
+        <!-- The Modal -->
+        <div id="myModal" class="modal">
+            <span class="close">&times;</span>
+            <img class="modal-content" id="img01">
+            <div id="caption"></div>
+        </div>
+
+        <script>
+        // Get the modal
+        var modal = document.getElementById('myModal');
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.getElementById('myImg');
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        img.onclick = function(){
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = this.alt;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+            modal.style.display = "none";
+        }
+        </script>
+    </div>
+
     
+</body>
+
 </html>
