@@ -236,37 +236,42 @@
     justify-content: flex-start;
 }
 
-.location_icon, #left_arr_img, #right_arr_img {
+#category_list {
+    display: none;
+    justify-content: flex-start
+}
+
+.location_icon, .left_arr_img, .right_arr_img {
     height: auto; 
     width: auto; 
-    max-width: 50px; 
-    max-height: 50px;
+    max-width: 125px; 
+    max-height: 125px;
     margin: auto;
 }
 
-#top_loc {
+#top_loc, #top_cat {
     flex: 1;
     display: flex;
     justify-content: space-around;
     margin-bot: auto;
 }
 
-#bot_loc {
+#bot_loc, #bot_cat {
     flex: 1;
     display: flex;
     justify-content: space-around;
     margin-top: auto;
 }
 
-#left_arr, #right_arr {
+.left_arr, .right_arr {
     flex: 1;
     display: flex;
 }
 
-#visible_rooms {
+#visible_rooms, #visible_categories {
     flex: 3;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    min-height: 125px;
+    min-height: 300px;
 }
