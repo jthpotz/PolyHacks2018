@@ -51,6 +51,7 @@
     background-color: #333;
     display: flex;
     display-content: flex-start;
+    display: none;
 }
 
 /* Navbar links */
