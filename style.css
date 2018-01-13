@@ -67,3 +67,24 @@
 #jump {
     margin-left: auto;
 }
+
+#headerbar {
+    overflow: hidden;
+    display: flex;
+    display-content: flex-start;
+}
+
+/* Navbar links */
+#headerbar a {
+    float: left;
+    display: block;
+    color: #000000;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    line-height: 40px;
+}
+
+#add_category {
+    margin-left: auto;
+}
