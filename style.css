@@ -203,3 +203,42 @@
     }
 }
 
+#room_list {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.location_icon, #left_arr_img, #right_arr_img {
+    height: auto; 
+    width: auto; 
+    max-width: 50px; 
+    max-height: 50px;
+    margin: auto;
+}
+
+#top_loc {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    margin-bot: auto;
+}
+
+#bot_loc {
+    flex: 1;
+    display: flex;
+    justify-content: space-around;
+    margin-top: auto;
+}
+
+#left_arr, #right_arr {
+    flex: 1;
+    display: flex;
+}
+
+#visible_rooms {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    min-height: 125px;
+}
