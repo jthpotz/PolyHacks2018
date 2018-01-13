@@ -107,8 +107,8 @@
 
 .edit_button {
   display: inline-block;
-  padding: 15px 25px;
-  font-size: 24px;
+  padding: 5px 15px;
+  font-size: 18px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -141,8 +141,15 @@
     margin-left: 20px;
 }
 
+
 #item_rest_box{
     margin-left: 20px;
+}
+
+table, th, td{
+    border:0px solid black;
+    border-collapse: collapse;
+    padding:5px;
 }
 
 #myImg {
