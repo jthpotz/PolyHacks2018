@@ -31,13 +31,13 @@
 
 .sticky_loc {
     position: fixed;
-    top: 69px;
+    top: 68px;
     width: 100%;
 }
 
 .sticky_head {
     position: fixed;
-    top: 138px;
+    top: 136px;
     width: 100%;
 }
 
@@ -254,9 +254,9 @@ table, th, td{
 }
 
 #category_list {
-    display: none;
+    display: flex;
     justify-content: flex-start;
-    height: 70vh;
+    height: 90vh;
 }
 
 .location_icon, .left_arr_img, .right_arr_img {

@@ -134,8 +134,9 @@ function load_category(){
 
 function set_room(name){
     room_text.innerHTML = "Room: " + name;
-    room_box.style.display = "none";
-    cat_box.style.display = "flex";
+    //room_box.style.display = "none";
+    //cat_box.style.display = "flex";
+    scroll("category_list");
     room = name;
     cur_choice = "Category";
     update_section_text(cur_choice);
@@ -143,7 +144,7 @@ function set_room(name){
 
 function set_category(name){
     category_text.innerHTML = "Category: " + name;
-    cat_box.style.display = "none";
+    //cat_box.style.display = "none";
     category = name;
     cur_choice = "Item";
     update_section_text(cur_choice);
@@ -152,8 +153,9 @@ function set_category(name){
 function reset(){
     room_text.innerHTML = "Room: None Selected";
     category_text.innerHTML = "Category: None Selected";
-    room_box.style.display = "flex";
-    cat_box.style.display = "none";
+    scroll("room_list");
+    //room_box.style.display = "flex";
+    //cat_box.style.display = "none";
     cur_choice = "Room";
     update_section_text(cur_choice);
 }
@@ -169,5 +171,12 @@ function jump_cat(){
         cat_box.style.display = "flex";
         cur_choice = "Category";
         update_section_text(cur_choice);
+        scroll("room_list");
     }
+}
+
+function scroll(to_where){
+    $('html:not(:animated), body:not(:animated)').animate({
+            scrollTop: $("#" + to_where).offset().top
+        }, 2000);
 }
