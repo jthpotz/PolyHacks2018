@@ -309,6 +309,7 @@ function getData() {
 
         var mri = 0;
         var mci = 0;
+        var n = 0;
 
         //console.log(snapshot.val());
         var item_main_labels = document.getElementById("item_main_labels");
@@ -348,6 +349,12 @@ function getData() {
                     var thisCat = child.val();
                     if (myCategories.indexOf(thisCat) == -1) {
                         myCategories[mci++] = thisCat;
+                    }
+                } else if (key == "Name") {
+                    var thisName = child.val();
+                    if (allItems.indexOf(thisName) == -1) {
+                        allItems[n++] = thisName;
+                        console.log(thisName);
                     }
                 }
 
@@ -397,7 +404,8 @@ function getData() {
 
         });
 
-        iNames();
+        //iNames();
+        myItemNames = allItems;
         load_locations();
         load_category();
         load_items();
