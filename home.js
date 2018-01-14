@@ -27,13 +27,14 @@ var item_pos = 0;
 var room_text;
 var room_names = ["Master Bathroom", "Bathroom", "Master Bedroom", "Kid Bedroom", "Living Room", "Kitchen"];
 var category_names = ["Furniture", "Electronics", "Personal Items", "Office Supplies", "Plants", "Games"];
-var item_names = ["Bookshelf", "Cabinet", "Clock", "Dresser", "Lamp", "Painting", "Pillow", "Rug"];
+var item_names = ["Bookshelf", "Cabinet", "Clock", "Dresser", "Lamp", "Painting", "Pillow", "Rug", "Grandma Vase", "Fernando", "Painting2", "Polaroid"];
 var category_text;
 var room_box;
 var cat_box;
 var room = null;
 var category = null;
 var cur_choice = "Room";
+var choice_img;
 var choice_text;
 var max_per_slide = 6;
 
@@ -62,11 +63,8 @@ window.onload = function() {
     room_box = document.getElementById("room_list");
     cat_box = document.getElementById("category_list");
     choice_text = document.getElementById("choice");
-    
-    
+    choice_img = document.getElementById("choice_imgg");
     getData();
-    
-    
 }
 
 
@@ -237,7 +235,15 @@ function reset(){
 }
 
 function update_section_text(update){
-    choice_text.innerHTML = update;
+    if (update == "Room"){
+        choice_img.src = "icons/rooms.png";
+    }
+    else if (update == "Category"){
+        choice_img.src = "icons/category.png";
+    }
+    else if (update == "Item"){
+        choice_img.src = "icons/items.png";
+    }
 }
 
 function jump_cat(){

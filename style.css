@@ -1,5 +1,6 @@
 h2{
     font-family: 'Roboto Slab', serif;
+    font-size: 18pt;
  }
 
  p{
@@ -9,7 +10,7 @@ h2{
  /* Style the navbar */
 #navbar {
     overflow: hidden;
-    background-color: #333;
+    background-color: #FFF;
     display: flex;
     display-content: flex-start;
     position: fixed;
@@ -62,8 +63,19 @@ h2{
     vertical-align: middle;
 }
 
-#news {
+#account{
+    height:35px;
+    vertical-align: middle;
+    padding-top: 10px;
+    justify-content: flex-end;
+}
+
+#upload {
+    height: 35px;
     margin-left: auto;
+    vertical-align: middle;
+    padding-top: 10px;
+    justify-content: flex-end;
 }
 
 #locationbar {
@@ -85,6 +97,16 @@ h2{
     padding: 14px;
     text-decoration: none;
     line-height: 40px;
+}
+
+#sort {
+    height:30px;
+    padding-top: 5px;
+}
+
+#filter{
+    height: 30px;
+    padding-top: 5px;
 }
 
 #jump {
@@ -125,6 +147,12 @@ h2{
     display: flex;
     justify-content: space-between;
     /*display: none;*/
+}
+
+#edit{
+    height:35px;
+    padding-top: 13px;
+    padding-right: 15px; 
 }
 
 .edit_button {
