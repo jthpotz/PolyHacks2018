@@ -216,7 +216,17 @@ function set_category(name){
 
 function select_item(name){
     scroll("item");
-    putDataInField();
+    var uid = -01;
+    console.log(name);
+    console.log(filteredItems.length);
+    var i = 0;
+    for(i = 0; i < filteredItems.length; i++){
+        console.log(filteredItems[i]["Name"]);
+        if(filteredItems[i]["Name"] == name){
+            uid = filteredItems[i]["uid"];
+        }
+    }
+    putDataInField(uid);
 }
 
 function reset(){
@@ -273,6 +283,8 @@ function scroll(to_where){
 
 
 function putDataInField(searchUID) {
+
+    console.log(searchUID);
 
     var item_main_labels = document.getElementById("item_main_labels");
     var item_main_fields = document.getElementById("item_main_fields");
