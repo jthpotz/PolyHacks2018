@@ -265,7 +265,7 @@ table, th, td{
 #room_list {
     display: flex;
     justify-content: flex-start;
-    height: 70vh;
+    height: 80vh;
 }
 
 #category_list, #item_list {
