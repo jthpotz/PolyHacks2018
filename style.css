@@ -113,6 +113,11 @@ h2{
     margin-left: auto;
 }
 
+#jump_top{
+    height: 30px;
+    padding-top: 5px;
+}
+
 #headerbar {
     overflow: hidden;
     display: flex;
