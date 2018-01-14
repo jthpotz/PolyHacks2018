@@ -8,7 +8,7 @@ var location_pos = 0;
 var category_pos = 0;
 var room_text;
 var room_names = ["Master Bathroom", "Bathroom", "Master Bedroom", "Kid Bedroom", "Living Room", "Kitchen"];
-var category_names = ["Furniture", "Electronics", "Personal Items", "Office Supplies", "Plants"];
+var category_names = ["Furniture", "Electronics", "Personal Items", "Office Supplies", "Plants", "Games"];
 var item_names = ["Bookshelf", "Cabinet", "Clock", "Dresser", "Lamp", "Painting", "Pillow", "Rug"];
 var category_text;
 var room_box;
