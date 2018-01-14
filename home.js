@@ -7,7 +7,7 @@ var stickyLoc;
 var location_pos = 0;
 var category_pos = 0;
 var room_text;
-var room_names = ["Master Bathroom", "Bathroom", "Master Bedroom", "Kid\'s Bedroom", "Living Room", "Kitchen"];
+var room_names = ["Master Bathroom", "Bathroom", "Master Bedroom", "Kid Bedroom", "Living Room", "Kitchen"];
 var category_names = ["Furniture", "Electronics", "Personal Items", "Office Supplies", "Plants"];
 var item_names = ["Bookshelf", "Cabinet", "Clock", "Dresser", "Lamp", "Painting", "Pillow", "Rug"];
 var category_text;
@@ -93,8 +93,9 @@ function load_locations(){
     
     while(i < room_names.length && i < 6){
         var elem = document.createElement("img");
-        console.log("icons/rooms/" + room_names[i] + ".png");
         elem.setAttribute("src", "icons/rooms/" + room_names[i] + ".jpg");
+        elem.setAttribute("onmouseover", "this.src='icons/rooms/rooms_hover/" + room_names[i] + ".jpg'");
+        elem.setAttribute("onmouseout", "this.src='icons/rooms/" + room_names[i] + ".jpg'");
         elem.setAttribute("class", "location_icon");
         elem.setAttribute("onclick", "set_room(\"" + room_names[i] + "\")");
         var div;
@@ -118,6 +119,8 @@ function load_category(){
     while(i < category_names.length && i < 6){
         var elem = document.createElement("img");
         elem.setAttribute("src", "icons/tags/" + category_names[i] + ".jpg");
+        elem.setAttribute("onmouseover", "this.src='icons/tags/tags_hover/" + category_names[i] + ".jpg'");
+        elem.setAttribute("onmouseout", "this.src='icons/tags/" + category_names[i] + ".jpg'");
         elem.setAttribute("class", "location_icon");
         elem.setAttribute("onclick", "set_category(\"" + category_names[i] + "\")");
         var div;
@@ -141,6 +144,8 @@ function load_items(){
     while(i < item_names.length && i < 6){
         var elem = document.createElement("img");
         elem.setAttribute("src", "icons/items/" + item_names[i] + ".jpg");
+        elem.setAttribute("onmouseover", "this.src='icons/items/items_hover/" + item_names[i] + ".jpg'");
+        elem.setAttribute("onmouseout", "this.src='icons/items/" + item_names[i] + ".jpg'");
         elem.setAttribute("class", "location_icon");
         elem.setAttribute("onclick", "select_item(\"" + item_names[i] + "\")");
         var div;
