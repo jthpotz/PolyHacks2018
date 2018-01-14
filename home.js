@@ -383,6 +383,11 @@ function getData() {
 
         //putDataInField();
 
+        
+        console.log(myItems[0]["Name"]);
+        console.log(myItems[0]);
+        console.log(myItems[1]["Name"]);
+        console.log(myItems[1]);
 
         myItems.forEach(function(child) {
             var str = JSON.stringify(child, null, 4);
@@ -392,10 +397,10 @@ function getData() {
 
         });
 
-    iNames();
-    load_locations();
-    load_category();
-    load_items();
+        iNames();
+        load_locations();
+        load_category();
+        load_items();
         
     });
     
