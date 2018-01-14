@@ -1,4 +1,4 @@
- h2{
+h2{
     font-family: 'Roboto Slab', serif;
  }
 
@@ -13,7 +13,7 @@
     display: flex;
     display-content: flex-start;
     position: fixed;
-    width: 95%;
+    width: 98%;
     top: 0;
 }
 
@@ -58,10 +58,7 @@
 } 
 
 #logo {
-    height: auto; 
-    width: auto; 
-    max-width: 50px; 
-    max-height: 50px;
+    height: 50px;
     vertical-align: middle;
 }
 
@@ -75,7 +72,7 @@
     display: flex;
     display-content: flex-start;
     position: fixed;
-    width: 95%;
+    width: 98%;
     top: 68px;
 }
 
@@ -99,7 +96,7 @@
     display: flex;
     display-content: flex-start;
     position: fixed;
-    width: 95%;
+    width: 98%;
     top: 136px;
 }
 
@@ -127,7 +124,7 @@
 #item_description_box{
     display: flex;
     justify-content: space-between;
-    display: none;
+    /*display: none;*/
 }
 
 .edit_button {
@@ -156,7 +153,7 @@
 #item_photo_box{
     display: flex;
     justify-content: flex-start;
-    display: none;
+    /*display: none;*/
 }
 
 #item_photo{
@@ -170,7 +167,7 @@
 
 #item_rest_box{
     margin-left: 20px;
-    display: none;
+    /*display: none;*/
 }
 
 table, th, td{
