@@ -185,6 +185,8 @@ function reset(){
     scroll("room_list");
     //room_box.style.display = "flex";
     //cat_box.style.display = "none";
+    category = null;
+    room = null;
     cur_choice = "Room";
     update_section_text(cur_choice);
 }
