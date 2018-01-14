@@ -3,6 +3,8 @@
 <html>
     <head> 
         <link rel="stylesheet" href="style.css">
+        <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase-database.js"></script>
         <script src="home.js"></script> 
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>
         <link href="https://fonts.googleapis.com/css?family=Roboto+Slab" rel="stylesheet">
@@ -35,7 +37,7 @@
         
         <div id='room_list'>
             <div class='left_arr'>
-                <img class='left_arr_img' src="icons/left_arrow.png" />
+                <img id="r_l" class='left_arr_img' src="icons/left_arrow.png" />
             </div>
             
             <div id='visible_rooms'>
@@ -46,13 +48,13 @@
             </div>
             
             <div class='right_arr'>
-                <img class='right_arr_img' src="icons/right_arrow.png" />
+                <img id="r_r" class='right_arr_img' src="icons/right_arrow.png" />
             </div>
         </div>
         
         <div id='category_list'>
             <div class='left_arr'>
-                <img class='left_arr_img' src="icons/left_arrow.png" />
+                <img id="c_l" class='left_arr_img' src="icons/left_arrow.png" />
             </div>
             
             <div id='visible_categories'>
@@ -63,13 +65,13 @@
             </div>
             
             <div class='right_arr'>
-            <img class='right_arr_img' src="icons/right_arrow.png"" />
+            <img id="c_r" class='right_arr_img' src="icons/right_arrow.png" />
             </div>
         </div>
      
         <div id='item_list'>
             <div class='left_arr'>
-                <img class='left_arr_img' src="icons/left_arrow.png" />
+                <img id="i_l" class='left_arr_img' src="icons/left_arrow.png" />
             </div>
             
             <div id='visible_items'>
@@ -80,7 +82,7 @@
             </div>
             
             <div class='right_arr'>
-            <img class='right_arr_img' src="icons/right_arrow.png"" />
+            <img id="i_r" class='right_arr_img' src="icons/right_arrow.png"" />
             </div>
         </div>
      
