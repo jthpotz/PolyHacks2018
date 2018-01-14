@@ -58,6 +58,11 @@ h2{
     padding-top: 60px;
 } 
 
+#room, #category{
+    font-family: 'Roboto Slab', serif;
+    padding-top: 2px;
+}
+
 #logo {
     height: 50px;
     vertical-align: middle;
