@@ -1,3 +1,11 @@
+ h2{
+    font-family: 'Roboto Slab', serif;
+ }
+
+ p{
+    font-family: 'Raleway', sans-serif;
+ }
+
  /* Style the navbar */
 #navbar {
     overflow: hidden;
@@ -96,6 +104,7 @@
     text-decoration: none;
     line-height: 40px;
 }
+
 
 #add_category {
     margin-left: auto;
@@ -259,13 +268,26 @@ table, th, td{
     height: 70vh;
 }
 
-.location_icon, .left_arr_img, .right_arr_img {
+.location_icon {
     height: auto; 
     width: auto; 
     max-width: 175px; 
     max-height: 175px;
     margin: auto;
     border-radius: 5px;
+}
+
+.left_arr_img, .right_arr_img{
+    height: 45px;
+    width: 25px;
+    margin:auto;
+    opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.left_arr_img:hover, .right_arr_img:hover {
+    opacity: 1.0;
+    filter: alpha(opacity=100); /* For IE8 and earlier */
 }
 
 #top_loc, #top_cat {
