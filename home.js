@@ -9,6 +9,7 @@ var category_pos = 0;
 var room_text;
 var room_names = ["Master Bathroom", "Bathroom", "Master Bedroom", "Kid\'s Bedroom", "Living Room", "Kitchen"];
 var category_names = ["Furniture", "Electronics", "Personal Items", "Office Supplies", "Plants"];
+var item_names = ["Bookshelf", "Cabinet", "Clock", "Dresser", "Lamp", "Painting", "Pillow", "Rug"];
 var category_text;
 var room_box;
 var cat_box;
@@ -16,7 +17,7 @@ var room;
 var category;
 var cur_choice = "Room";
 var choice_text;
-window.onscroll = function() {stick()};
+//window.onscroll = function() {stick()};
 window.onload = function() {
     // Get the navbar
     navbar = document.getElementById("navbar");
@@ -30,6 +31,7 @@ window.onload = function() {
     
     load_locations();
     load_category();
+    load_items();
     room_text = document.getElementById("room");
     category_text = document.getElementById("category");
     room_box = document.getElementById("room_list");
@@ -115,7 +117,6 @@ function load_category(){
     
     while(i < category_names.length && i < 6){
         var elem = document.createElement("img");
-        console.log("icons/tags/" + category_names[i] + ".png");
         elem.setAttribute("src", "icons/tags/" + category_names[i] + ".jpg");
         elem.setAttribute("class", "location_icon");
         elem.setAttribute("onclick", "set_category(\"" + category_names[i] + "\")");
@@ -125,6 +126,29 @@ function load_category(){
         }
         else{
             div = document.getElementById("bot_cat");
+        }
+        div.appendChild(elem);
+        i++;
+    }
+    category_pos = i;
+}
+
+function load_items(){
+    var i = 0;
+    var top_row = true;
+    
+    
+    while(i < item_names.length && i < 6){
+        var elem = document.createElement("img");
+        elem.setAttribute("src", "icons/items/" + item_names[i] + ".jpg");
+        elem.setAttribute("class", "location_icon");
+        elem.setAttribute("onclick", "select_item(\"" + item_names[i] + "\")");
+        var div;
+        if(i < 3){
+            div = document.getElementById("top_item");
+        }
+        else{
+            div = document.getElementById("bot_item");
         }
         div.appendChild(elem);
         i++;
@@ -145,9 +169,14 @@ function set_room(name){
 function set_category(name){
     category_text.innerHTML = "Category: " + name;
     //cat_box.style.display = "none";
+    scroll("item_list");
     category = name;
     cur_choice = "Item";
     update_section_text(cur_choice);
+}
+
+function select_item(name){
+    scroll("item");
 }
 
 function reset(){
@@ -167,16 +196,16 @@ function update_section_text(update){
 function jump_cat(){
     if(!(cur_choice == "Room")){
         category_text.innerHTML = "Category: None Selected";
-        room_box.style.display = "none";
-        cat_box.style.display = "flex";
+        //room_box.style.display = "none";
+        //cat_box.style.display = "flex";
         cur_choice = "Category";
         update_section_text(cur_choice);
-        scroll("room_list");
+        scroll("category_list");
     }
 }
 
 function scroll(to_where){
     $('html:not(:animated), body:not(:animated)').animate({
-            scrollTop: $("#" + to_where).offset().top
+            scrollTop: ($("#" + to_where).offset().top)-140
         }, 2000);
 }
